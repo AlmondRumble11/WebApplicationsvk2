@@ -37,6 +37,7 @@ function ButtonFunctions() {
     ratingArticle.classList.add("comment-rating");
     textArticle.classList.add("comment-text");
 
+    newDiv.classList.add("comment");
     //divRating.classList.add("comment-rating");
     //divText.classList.add("comment-text");
     newDiv.appendChild(ratingArticle);
