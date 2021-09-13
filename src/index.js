@@ -5,7 +5,7 @@ if (document.readyState !== "loading") {
   console.log("Ready!!");
   ButtonFunctions();
 } else {
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     console.log("Wait a bit!");
     ButtonFunctions();
   });
