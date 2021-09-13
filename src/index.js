@@ -26,10 +26,10 @@ function ButtonFunctions() {
     let newDiv = document.createElement("div");
 
     //first div elment = rating and second div element = text
-    const ratingArticle = document.createElement("article");
-    const textArticle = document.createElement("article");
+    let ratingArticle = document.createElement("article");
+    let textArticle = document.createElement("article");
 
-    ratingArticle.innerHTML = rating.value;
+    /* ratingArticle.innerHTML = rating.value;
     textArticle.innerHTML = commentText.value;
 
     ratingArticle.classList.add("comment-rating");
@@ -38,10 +38,9 @@ function ButtonFunctions() {
     //divRating.classList.add("comment-rating");
     //divText.classList.add("comment-text");
     newDiv.appendChild(ratingArticle);
-    newDiv.appendChild(textArticle);
+    newDiv.appendChild(textArticle);*/
 
     //adding comment to new list item value
-    //newListItem.innerHTML = commentText.value;
     //newListItem.appendChild(document.createTextNode(commentText.value));
 
     //create a remove button
@@ -50,7 +49,9 @@ function ButtonFunctions() {
     removeButton.classList.add("remove-comment");
     newDiv.appendChild(removeButton);
 
-    newListItem.appendChild(newDiv);
+    newListItem.appendChild(document.createTextNode(commentText.value));
+    newListItem.appendChild(document.createTextNode(rating.value));
+    newListItem.appendChild(removeButton);
 
     //clearing the comment area
     commentText.value = "";
@@ -58,13 +59,13 @@ function ButtonFunctions() {
     //adding new list item to the comment list
     commentList.appendChild(newListItem);
 
-    removeButton.addEventListener("click", function () {
+    /*removeButton.addEventListener("click", function () {
       var action = window.confirm("Really want to remove all comments");
       if (action === true) {
         //https://stackoverflow.com/questions/36035736/add-remove-li-element-from-the-ul-javascript
         newListItem.remove();
       }
-    });
+    });*/
   });
 
   //getting the remove-comments button
