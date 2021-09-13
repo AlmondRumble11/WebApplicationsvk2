@@ -6,7 +6,7 @@ body {
   font-style: italic;
 }
 .menu-layout {
-  width: 720px;
+  max-width: 720px;
   margin: auto;
   text-align: center;
 }
@@ -20,7 +20,7 @@ body {
 .table,
 th {
   background-color: #f87f65;
-  padding: 50px, 0px, 50px, 0px;
+  padding: 50px, 10px, 50px, 10px;
   width: 100%;
 }
 .remove-comment {
