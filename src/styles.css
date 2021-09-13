@@ -10,7 +10,7 @@ body {
   margin: auto;
   text-align: center;
 }
-#menu-table {
+.table {
   text-align: left;
   background-color: #f2f2f2;
   width: 100%;
@@ -21,7 +21,10 @@ body {
 
 #menu-table th {
   background-color: #f87f65;
-  padding: 50px, 10px, 50px, 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 100%;
 }
 .remove-comment {

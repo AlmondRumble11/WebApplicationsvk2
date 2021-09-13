@@ -21,9 +21,9 @@ function ButtonFunctions() {
     const commentList = document.getElementById("comment-list");
     const rating = document.getElementById("rating");
 
-    const newDiv = document.createElement("div");
     //creating new list item
     const newListItem = document.createElement("li");
+    const newDiv = document.createElement("div");
 
     //first div elment = rating
     const divRating = document.createTextNode(rating.value);
