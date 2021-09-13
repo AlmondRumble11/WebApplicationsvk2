@@ -2,9 +2,11 @@ import "./styles.css";
 
 //check if loading
 if (document.readyState !== "loading") {
+  console.log("Ready!!");
   ButtonFunctions();
 } else {
   document.addEventListener("DOMContentLoaded", function () {
+    console.log("Wait a bit!");
     ButtonFunctions();
   });
 }
@@ -22,14 +24,14 @@ function ButtonFunctions() {
     const rating = document.getElementById("rating");
 
     //creating new list item
-    let newListItem = document.createElement("li");
-    let newDiv = document.createElement("div");
+    var newListItem = document.createElement("li");
+    var newDiv = document.createElement("div");
 
     //first div elment = rating and second div element = text
     let ratingArticle = document.createElement("article");
     let textArticle = document.createElement("article");
 
-    /* ratingArticle.innerHTML = rating.value;
+    ratingArticle.innerHTML = rating.value;
     textArticle.innerHTML = commentText.value;
 
     ratingArticle.classList.add("comment-rating");
@@ -38,7 +40,7 @@ function ButtonFunctions() {
     //divRating.classList.add("comment-rating");
     //divText.classList.add("comment-text");
     newDiv.appendChild(ratingArticle);
-    newDiv.appendChild(textArticle);*/
+    newDiv.appendChild(textArticle);
 
     //adding comment to new list item value
     //newListItem.appendChild(document.createTextNode(commentText.value));
@@ -49,9 +51,10 @@ function ButtonFunctions() {
     removeButton.classList.add("remove-comment");
     newDiv.appendChild(removeButton);
 
-    newListItem.appendChild(document.createTextNode(commentText.value));
+    /*newListItem.appendChild(document.createTextNode(commentText.value));
     newListItem.appendChild(document.createTextNode(rating.value));
-    newListItem.appendChild(removeButton);
+    newListItem.appendChild(removeButton);*/
+    newListItem.appendChild(newDiv);
 
     //clearing the comment area
     commentText.value = "";
