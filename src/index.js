@@ -22,8 +22,8 @@ function ButtonFunctions() {
     const rating = document.getElementById("rating");
 
     //creating new list item
-    const newListItem = document.createElement("li");
-    const newDiv = document.createElement("div");
+    let newListItem = document.createElement("li");
+    let newDiv = document.createElement("div");
 
     //first div elment = rating
     const divRating = document.createTextNode(rating.value);
@@ -50,38 +50,30 @@ function ButtonFunctions() {
 
     //adding new list item to the comment list
     commentList.appendChild(newListItem);
-
-    removeButton.addEventListener("click", function () {
-      var action = window.confirm("Really want to remove all comments");
-      if (action === true) {
-        //https://stackoverflow.com/questions/36035736/add-remove-li-element-from-the-ul-javascript
-        newListItem.remove();
-      }
-    });
   });
 
   //getting the remove-comments button
   const removeCommentsButton = document.getElementById("remove-comments");
 
   //remove comments button event listener
-  removeCommentsButton.addEventListener("click", function () {
+  /* removeCommentsButton.addEventListener("click", function () {
     //getting comment list
 
     const removeBtn = document.getElementsByClassName("remove-comment");
     //number of comments
-    //const commentListLenght = commentList.getElementsByTagName("LI").length;
+    const element = document.getElementsByTagName("LI");
 
     //adding a delete button to all of the reviews
     for (var i = 0; i < removeBtn.length; i++) {
       removeBtn[i].style.visibility = "visible";
+      removeBtn[i].addEventListener("click", function () {
+        var action = true; //window.confirm("Really want to remove all comments");
+        if (action === true) {
+          //https://stackoverflow.com/questions/36035736/add-remove-li-element-from-the-ul-javascript
+          this[i].removeChild(this);
+        }
+      });
     }
     //ask confirmation
-    /* var action = window.confirm("Really want to remove all comments");
-    if (action === true) {
-      //go through the comments and delete them all
-      for (var i = 0; i < commentListLenght; i++) {
-        commentList.removeChild(commentList.lastChild);
-      }
-    }*/
-  });
+  });*/
 }

@@ -10,7 +10,7 @@ body {
   margin: auto;
   text-align: center;
 }
-.table {
+#menu-table {
   text-align: left;
   background-color: #f2f2f2;
   width: 100%;
