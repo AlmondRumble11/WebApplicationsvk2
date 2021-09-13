@@ -56,11 +56,6 @@ function ButtonFunctions() {
       if (action === true) {
         //https://stackoverflow.com/questions/36035736/add-remove-li-element-from-the-ul-javascript
         newListItem.remove();
-        const commentList = document.getElementById("comment-list");
-        const removeBtn = document.getElementsByClassName("remove-comment");
-        for (var i = 0; i < commentList.length; i++) {
-          removeBtn[i].style.visibility = "hidden";
-        }
       }
     });
   });
