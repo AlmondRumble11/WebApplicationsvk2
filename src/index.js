@@ -62,12 +62,12 @@ function ButtonFunctions() {
 
   //getting the remove-comments button
   const removeCommentsButton = document.getElementById("remove-comments");
-  const removeBtn = document.getElementsByClassName("remove-comment");
+
   //remove comments button event listener
   removeCommentsButton.addEventListener("click", function () {
     //getting comment list
-    const commentList = document.getElementById("comment-list");
 
+    const removeBtn = document.getElementsByClassName("remove-comment");
     //number of comments
     //const commentListLenght = commentList.getElementsByTagName("LI").length;
 
