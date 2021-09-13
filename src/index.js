@@ -62,13 +62,13 @@ function ButtonFunctions() {
     //adding new list item to the comment list
     commentList.appendChild(newListItem);
 
-    /*removeButton.addEventListener("click", function () {
+    removeButton.addEventListener("click", function () {
       var action = window.confirm("Really want to remove all comments");
       if (action === true) {
         //https://stackoverflow.com/questions/36035736/add-remove-li-element-from-the-ul-javascript
         newListItem.remove();
       }
-    });*/
+    });
   });
 
   //getting the remove-comments button
